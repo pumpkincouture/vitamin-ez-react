@@ -1,18 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Container, Row } from 'react-bootstrap';
+import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
-import { HomePage } from './components/HomePage';
+import { SplashPage } from './components/SplashPage';
+import { VitaminInfoPage } from './components/VitaminInfoPage';
+import { WelcomePage } from './components/WelcomePage';
 
 function App() {
   return (
-    <Container className="homepage-container">
-      <Row className="homepage-row w-75">
-        <HomePage></HomePage>
-      </Row>
-
-    </Container>
+      <Switch>
+        <Route exact path="/vitamins/:id" component={VitaminInfoPage} />
+        <Route exact path="/vitamins" component={WelcomePage} />
+        <Route exact path="/" component={SplashPage} />
+      </Switch>
   )
 }
 
