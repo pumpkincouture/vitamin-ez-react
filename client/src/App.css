@@ -1,0 +1,56 @@
+.home-title, .home-description {
+  color: white;
+}
+
+.homepage-div {
+  background-color: #53ACF0;
+  border-radius: 30px;
+}
+
+.homepage-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.homepage-get-started-button-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-body {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 100%), url('./images/vitamin-shelf.jpg');
+  background-size: cover;
+}
+
+.extra-vitamin-info {
+  font-style: italic;
+}
+
+.vitamin-navigation-links {
+  list-style-type: none;
+  margin: 0;
+}
+
+.vitamin-site-container {
+  display: flex;
+  width: 100%;
+}
+
+.vitamin-navigation-div {
+  width: 250px;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  height: 50vh;
+  z-index: 999;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  #vitamin-navigation-div {
+    margin-left: -250px;
+  }
+}
