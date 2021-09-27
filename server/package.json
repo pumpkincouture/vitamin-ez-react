@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js",
+    "seed": "node lib/db/setup.js",
+    "build": "babel src --out-dir lib",
+    "start": "npm run build && node lib/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +21,14 @@
   },
   "homepage": "https://github.com/pumpkincouture/vitamin-ez-react#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "bluebird": "^3.7.2",
+    "express": "^4.17.1",
+    "mocha": "^9.1.2",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6"
   }
 }
